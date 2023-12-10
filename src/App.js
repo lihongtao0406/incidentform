@@ -199,7 +199,7 @@ const IncidentReportForm = () => {
                   name="Q1"
                   value={formData.Q1}
                   onChange={handleChange}
-                  style={{ width: '100%', height: '100px' }}
+                  style={{ width: '90%', height: '100px' }}
                 />
               </td>
             </tr>
@@ -213,7 +213,7 @@ const IncidentReportForm = () => {
                   name="Q2"
                   value={formData.Q2}
                   onChange={handleChange}
-                  style={{ width: '100%', height: '100px' }}
+                  style={{ width: '90%', height: '100px' }}
                 />
               </td>
             </tr>
@@ -227,7 +227,7 @@ const IncidentReportForm = () => {
                     name="Q3"
                     value={formData.Q3}
                     onChange={handleChange}
-                    style={{ width: '100%', height: '100px' }}
+                    style={{ width: '90%', height: '100px' }}
                   />
               </td>
             </tr>
