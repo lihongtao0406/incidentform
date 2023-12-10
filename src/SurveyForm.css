@@ -1,0 +1,26 @@
+/* input {
+  border: none;
+} */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-weight: 600;
+  font-size: small;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+}
+h2 {
+  text-align: center;
+}
+.incident-info-row {
+  background-color: red;
+  text-align: center;
+  font-weight: bold;
+  border: none;
+}
+.empty-row{
+  border:none
+}
