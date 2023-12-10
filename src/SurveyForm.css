@@ -24,3 +24,7 @@ h2 {
 .empty-row{
   border:none
 }
+.formtable {
+  margin-left: 10px;
+  margin-right: 10px;
+}
