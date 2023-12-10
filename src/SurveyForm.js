@@ -38,26 +38,30 @@ const IncidentReportForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const requiredFields = ['reportedBy', 'dateOfReport', 'titleRole', 'incidentNumber'];
+        const requiredFields = ['reportedBy', 'dateOfReport', 'titleRole', 'incidentNumber','dateOfIncident', 'timeOfIncident',
+    'Name','DOB','location', 'gender', 'postcode', 'address', 'Q1', 'Q2', 'Q3', 'Signature', 'date', 'phone' ];
         const isEmptyField = requiredFields.some(field => !formData[field]);
-    
+
         if (isEmptyField) {
         // Display a message or perform any other action to notify the user
         alert('Please fill in all required fields.');
         return;
         }
-  
-        const formElement = e.target;
-        emailjs.sendForm('service_as56fh7', 'template_eszjfdb', formElement, 'bPy-h2SZOnJWROao-')
-        .then(
-            (response) => {
-                console.log('Email sent successfully:', response);
-                navigate("/success");
-            },
-            (error) => {
-                console.error('Error sending email:', error);
-            }
-        );
+
+        const isConfirmed = window.confirm('Are you sure you want to submit the form?');
+        if(isConfirmed){
+            const formElement = e.target;
+            emailjs.sendForm('service_as56fh7', 'template_60w7u1h', formElement, 'bPy-h2SZOnJWROao-')
+            .then(
+                (response) => {
+                    console.log('Email sent successfully:', response);
+                    navigate("/success");
+                },
+                (error) => {
+                    console.error('Error sending email:', error);
+                }
+            );
+        }
     };
 
     return (
